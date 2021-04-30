@@ -1,0 +1,34 @@
+{
+  "name": "page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "watch": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Tsukina-7mochi@github.com/Tsukina-7mochi/page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tsukina-7mochi/page/issues"
+  },
+  "homepage": "https://github.com/Tsukina-7mochi/page#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.4",
+    "eslint": "^7.25.0",
+    "fibers": "^5.0.0",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {}
+}
