@@ -6,8 +6,16 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  font-size: 20px;
-  line-height: 1.5em;
+  @media screen and (max-width:768px) {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+  @media screen and (min-width:768px) and ( max-width:1024px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width:1024px) {
+    font-size: 20px;
+  }
 }
 
 header {
@@ -64,13 +72,6 @@ body > main {
     h3 {
       font-size: 1.2em;
       margin-left: 0.2em;
-    }
-
-    &#illustrations {
-      img {
-        max-width: 33vw;
-        max-height: 33vh;
-      }
     }
   }
 }
