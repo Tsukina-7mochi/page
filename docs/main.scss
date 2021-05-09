@@ -1,6 +1,7 @@
 body {
   min-height: 100vh;
   margin: 0;
+  padding-top: 21px;
   background-image: url("./resources/icy2_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -20,6 +21,9 @@ body {
 
 header {
   background-color: #FFFFFF;
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   ul {
     display: flex;
@@ -86,5 +90,6 @@ a {
 }
 
 img.gitHubLink {
+  display: block;
   max-width: 100%;
 }

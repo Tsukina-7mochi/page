@@ -13,14 +13,15 @@
       <li><a href="https://twitter.com/Tsukina_7mochi">Twitter</a></li>
       <li><a href="https://github.com/Tsukina-7mochi">GitHub</a></li>
       <li><a href="https://www.pixiv.net/users/16722972">pixiv</a></li>
-      <li><a href="https://marshmallow-qa.com/Tsukina_7mochi">ﾏｼｭﾏﾛ</a></li>
+      <li><a href="javascript:void(0)" class="toggleLang" data-set="ja">JA</a></li>
+      <li><a href="javascript:void(0)" class="toggleLang" data-set="en">EN</a></li>
     </ul>
   </header>
   <section>
     <img src="./resources/name.png">
   </section>
-  <main>
-    <section>
+  <main data-lang="ja">
+    <section data-lang="ja">
       <h1>Abstract</h1>
 
       pixel-artist | front-end web developper | indie game developper
@@ -35,7 +36,21 @@
       </ul>
     </section>
 
-    <section id="illustrations">
+    <section data-lang="en">
+      <h1>Abstract</h1>
+
+      pixel-artist | front-end web developper | indie game developper
+      <br>
+      I like JS, Scala and Minecraft.
+
+      <ul>
+        <li><a href="https://twitter.com/Tsukina_7mochi">Twitter</a></li>
+        <li><a href="https://github.com/Tsukina-7mochi">GitHub</a></li>
+        <li><a href="https://www.pixiv.net/users/16722972">pixiv</a></li>
+      </ul>
+    </section>
+
+    <section class="illustrations">
       <h1>Illustrations</h1>
 
       <div id="illustrationsGrid">
@@ -64,7 +79,7 @@
       </span>
     </section>
 
-    <section>
+    <section data-lang="ja">
       <h1>Products</h1>
 
       <h2>Aseprite</h2>
@@ -100,6 +115,48 @@
       <section>
         Voiceroid2エディタをバックグラウンドで操作するライブラリです。
         フォーカスを奪わないため他のウィンドウの操作を妨害せず発音させることができます。
+
+        <a href="https://github.com/Tsukina-7mochi/voiceroid2AutomationLib" target="_blank">
+          <img src="https://gh-card.dev/repos/Tsukina-7mochi/voiceroid2AutomationLib.svg" class="gitHubLink">
+        </a>
+      </section>
+    </section>
+
+    <section data-lang="en">
+      <h1>Products</h1>
+
+      <h2>Aseprite</h2>
+
+      <a href="https://github.com/Tsukina-7mochi/aseprite-scripts" target="_blank">
+        <img src="https://gh-card.dev/repos/Tsukina-7mochi/aseprite-scripts.svg" class="gitHubLink">
+      </a>
+
+      <h3>Export as PSD</h3>
+
+      <section>
+        A script to export aseprite file to psd (photoshop file format).
+      </section>
+
+      <h3>LCD Pixel Filter</h3>
+
+      <section>
+        A script to apply filter like lcd.
+        Optional pattern can be set.
+      </section>
+
+      <h3>Smooth Filter</h3>
+
+      <section>
+        A script to apply filter smooths pixel-art.
+      </section>
+
+      <h2>Voiceroid</h2>
+
+      <h3>Voiceroid2 Automation Lib</h3>
+
+      <section>
+        A library to control Voiceroid2 Editor in background.
+        Can play sound without stealing focus from other window.
 
         <a href="https://github.com/Tsukina-7mochi/voiceroid2AutomationLib" target="_blank">
           <img src="https://gh-card.dev/repos/Tsukina-7mochi/voiceroid2AutomationLib.svg" class="gitHubLink">
