@@ -1,7 +1,8 @@
 /* eslint-env node */
 const path = require('path');
 
-const srcPath  = path.join(__dirname, 'docs');
+const srcPath  = path.join(__dirname, 'src');
+const destPath = path.join(__dirname, 'bundled');
 
 module.exports = {
   module: {
@@ -58,7 +59,7 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: srcPath,
+    path: destPath,
   },
   mode: 'development',
   devtool: 'cheap-source-map',
