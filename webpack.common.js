@@ -48,9 +48,9 @@ module.exports = {
         ],
       },
       {
-        // リソースをData URLで埋め込み
-        test: /\.(gif|png|jpg|eot|wof|woff|woff2|ttf|svg)$/,
-        loader: 'url-loader',
+        // フォントを文字列としてそのまま参照として解決
+        test: /\.(ttf|woff)$/,
+        type: 'asset/resource'
       }
     ]
   },
