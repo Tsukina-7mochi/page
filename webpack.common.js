@@ -61,8 +61,6 @@ module.exports = {
     filename: '[name].bundle.js',
     path: destPath,
   },
-  mode: 'development',
-  devtool: 'cheap-source-map',
   stats: {
     builtAt: true,
     errorsCount: true,

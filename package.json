@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "watch": "webpack --mode development --watch"
+    "build": "webpack --mode production --config ./webpack.prod.js",
+    "dev": "webpack --mode development --config ./webpack.dev.js",
+    "watch": "webpack --mode development --watch ./webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.36.2",
-    "webpack-cli": "^4.6.0"
-  },
-  "dependencies": {}
+    "webpack-cli": "^4.6.0",
+    "webpack-merge": "^5.8.0"
+  }
 }
