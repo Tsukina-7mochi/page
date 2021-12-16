@@ -1,12 +1,20 @@
-body {
-  min-height: 100vh;
-  margin: 0;
+@import "./defs.scss";
 
-  @media screen and (max-width:768px) {
+$header-height: 40px;
+$screen-width-small: 786px;
+$screen-width-midium: 1024px;
+$screen-width-large: 1600px;
+
+body {
+  margin: 0;
+  padding-top: $header-height * 1.5;
+  background-color: #FFFFFF;
+
+  @media screen and (max-width: $screen-width-small) {
     font-size: 14px;
     line-height: 1.5em;
   }
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: $screen-width-small) {
     font-size: 20px;
   }
 }
@@ -15,91 +23,105 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 40px;
+  height: $header-height;
   background-color: #FFFFFF;
   margin: 0;
+  box-shadow: $shadow-normal;
 
-  ul {
-    width: auto;
-    display: flex;
-    list-style: none;
-    margin: 0 auto;
-    padding: 10px 8px;
-    font-family: 'Makinas-4-Flat';
-    box-shadow: 0 -5px 15px #383333;
-    font-size: 0.8em;
+  a {
+    color: $c-link-text;
+  }
 
-    li {
-      width: 100px;
-      +li { border-left: 1px solid #B0B0B0; }
-      text-align: center;
+  > nav {
+    height: 100%;
+
+    > ul {
+      height: 100%;
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0 1em;
+      align-items: center;
+      font-family: 'Makinas-4-Flat';
+      font-size: 0.8em;
+
+      li {
+        width: 100px;
+        +li { border-left: 1px solid #B0B0B0; }
+        text-align: center;
+      }
     }
   }
 }
 
-body > section {
-  background-color: transparent;
+h1 {
   text-align: center;
+  font-family: 'Makinas-4-Flat';
 
-  img {
-    max-width: 100%;
-  }
+  @include bottomSeparator {
+    margin-top: 0.2em;
+  };
 }
 
 body > main {
   margin: 8px;
+  color: $c-text;
+
+  a {
+    color: $c-link-text;
+
+    &:visited {
+      color: $c-link-text-visited;
+    }
+  }
 
   > section {
+    +section { margin-top: 1em; }
+    @include normalShadowBoxRounded;
+
     padding: 0.25em 24px 1em;
     background-color: #FFFFFF;
-    font-family: 'Makinas-4-Flat';
-    color: #383333;
-    +section { margin-top: 8px; }
+    font-family: 'Kaisei Opti', serif;
     margin: 0 auto;
+    background-color: transparent;
+    text-align: center;
 
-    @media screen and (min-width:1024px) {
-      max-width: 80%;
-    }
-    @media screen and (min-width:1600px) {
-      max-width: 60%;
-    }
-
-    h1 {
-      text-align: center;
-      padding-bottom: 0.25em;
-      border-bottom: 2px solid #383333;
+    $small-width-ratio: 0.8;
+    $large-width-ratio: 0.6;
+    @media screen and (max-width: $screen-width-small) {
+      max-width: 100%;
     }
 
+    @media screen and (min-width: $screen-width-small) and (max-width: $screen-width-large) {
+      width: 100% * $small-width-ratio;
+      max-width: $screen-width-large * $large-width-ratio;
+    }
+    @media screen and (min-width: $screen-width-large) {
+      width: $screen-width-large * $large-width-ratio;
+    }
+
+    h2, h3 {
+      font-family: 'Makinas-4-Flat';
+      @include bottomSeparator;
+    }
     h2 {
       font-size: 1.5em;
-      border-left: 4px solid #383333;
-      padding-left: 0.3em;
     }
-
     h3 {
       font-size: 1.2em;
-      margin: 0.25em;
-      margin-left: 0.2em;
     }
   }
 }
 
-span.mini {
-  font-size: 0.65em;
-}
-
-a {
-  color: inherit;
-}
-
-img.gitHubLink {
+div.link-block {
   display: block;
-  max-width: 100%;
-}
+  padding: 0.25em;
+  text-align: center;
+  font-family: 'Makinas-4-Flat';
+  border: 1px solid $c-border;
+  border-radius: $radius;
 
-div.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  a, span.description {
+    display: block;
+  }
 }

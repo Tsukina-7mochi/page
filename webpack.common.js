@@ -55,7 +55,8 @@ module.exports = {
     ]
   },
   entry: {
-    main: path.join(srcPath, 'main.js')
+    main: path.join(srcPath, 'main.js'),
+    "index-css-loader": path.join(srcPath, 'index-css-loader.js')
   },
   output: {
     filename: '[name].bundle.js',
@@ -66,8 +67,5 @@ module.exports = {
     errorsCount: true,
     warningsCount: true,
     timings: true,
-  },
-  watchOptions: {
-    ignored: /(node_modules)|(dist)/,
   }
 }

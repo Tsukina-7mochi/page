@@ -6,12 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>糖衣月餅</title>
   <script src="main.bundle.js"></script>
+  <script src="index-css-loader.bundle.js"></script>
 </head>
 <body>
   <header>
-    <ul>
-      <li><a href="index.html">Top Page</a></li>
-    </ul>
+    <nav>
+      <ul>
+        <li><a href="index.html">Top Page</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -26,13 +29,44 @@
     <section>
       <h2>Links</h2>
 
-      <ul>
-        <li><a href="https://twitter.com/Tsukina_7mochi">Twitter</a></li>
-        <li><a href="https://github.com/Tsukina-7mochi">GitHub</a></li>
-        <li><a href="https://www.pixiv.net/users/16722972">pixiv</a></li>
-        <li><a href="https://marshmallow-qa.com/Tsukina_7mochi">マシュマロ</a></li>
-        <li><a href="https://qiita.com/Tsukina_7mochi">Qiita</a></li>
-      </ul>
+      ご連絡はTwitterのDMまでお願いいたします。
+
+      <nav class="links">
+        <div class="link-block">
+          <a href="https://twitter.com/Tsukina_7mochi">Twitter</a>
+          <span class="description">
+            普段のイラスト・呟きなど
+          </span>
+        </div>
+
+        <div class="link-block">
+          <a href="https://github.com/Tsukina-7mochi">GitHub</a>
+          <span class="description">
+            プログラムとそのソース
+          </span>
+        </div>
+
+        <div class="link-block">
+          <a href="https://www.pixiv.net/users/16722972">pixiv</a>
+          <span class="description">
+            たまに絵をあげます
+          </span>
+        </div>
+
+        <div class="link-block">
+          <a href="https://marshmallow-qa.com/Tsukina_7mochi">マシュマロ</a>
+          <span class="description">
+            匿名お便りサービス
+          </span>
+        </div>
+
+        <div class="link-block">
+          <a href="https://qiita.com/Tsukina_7mochi">Qiita</a>
+          <span class="description">
+            技術系のことを気が向いたら書きます
+          </span>
+        </div>
+      </nav>
     </section>
   </main>
 </body>

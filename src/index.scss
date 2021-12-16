@@ -1,0 +1,9 @@
+// stylesheet for index.html
+@import "./defs.scss";
+
+nav.links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.2em;
+  margin: 0.3em 0;
+}

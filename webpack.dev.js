@@ -4,5 +4,9 @@ const commonConfig = require('./webpack.common.js');
 
 module.exports = merge(commonConfig, {
   mode: 'development',
-  devtool: 'eval'
+  devtool: 'eval',
+  watchOptions: {
+    ignored: /(node_modules)|(dist)/,
+    poll: true
+  }
 });

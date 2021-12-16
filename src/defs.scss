@@ -1,0 +1,35 @@
+$c-def-highlight: #53cbcf;
+$c-def-highlight2: #a9e7ff;
+$c-def-white: #FFFFFF;
+$c-def-black: #494b55;
+$c-def-gray: #aeb4b6;
+
+
+$c-bg: $c-def-white;
+$c-text: $c-def-black;
+$c-link-text: $c-def-highlight;
+$c-link-text-visited: $c-def-highlight2;
+$c-border: $c-def-gray;
+
+$radius: 6px;
+$shadow-normal: 0px 0px 5px $c-def-black;
+$gradient-basic: linear-gradient(to right, $c-def-highlight 0%, $c-def-highlight2 100%);
+
+@mixin bottomSeparator {
+  @content;
+
+  &::after {
+    display: block;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background: $gradient-basic;
+  }
+}
+
+@mixin normalShadowBoxRounded {
+  border-radius: $radius;
+  box-shadow: $shadow-normal;
+  padding: 1em;
+  @content;
+}
