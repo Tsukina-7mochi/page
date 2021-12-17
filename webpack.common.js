@@ -2,7 +2,7 @@
 const path = require('path');
 
 const srcPath  = path.join(__dirname, 'src');
-const destPath = path.join(__dirname, 'bundled');
+const destPath = path.join(__dirname, 'docs');
 
 module.exports = {
   module: {
