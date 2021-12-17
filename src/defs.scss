@@ -6,6 +6,8 @@ $c-def-gray: #aeb4b6;
 
 
 $c-bg: $c-def-white;
+$c-bg-hover: darken($c-def-white, 2%);
+$c-bg-active: darken($c-def-white, 4%);
 $c-text: $c-def-black;
 $c-link-text: $c-def-highlight;
 $c-link-text-visited: $c-def-highlight2;

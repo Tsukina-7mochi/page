@@ -56,7 +56,7 @@ module.exports = {
   },
   entry: {
     main: path.join(srcPath, 'main.js'),
-    "index-css-loader": path.join(srcPath, 'index-css-loader.js')
+    index: path.join(srcPath, 'index.js')
   },
   output: {
     filename: '[name].bundle.js',
