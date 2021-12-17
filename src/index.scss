@@ -1,6 +1,20 @@
 // stylesheet for index.html
 @import "./defs.scss";
 
+h1 {
+  @media screen and (max-width: 400px) {
+    line-height: 1em;
+
+    span {
+      display: block;
+
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+  }
+}
+
 nav.links {
   display: grid;
   grid-template-columns: 1fr 1fr;

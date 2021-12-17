@@ -7,7 +7,7 @@ $screen-width-large: 1600px;
 
 body {
   margin: 0;
-  padding-top: $header-height * 1.5;
+  padding-top: $header-height * 1.25;
   background-color: #FFFFFF;
 
   @media screen and (max-width: $screen-width-small) {
@@ -59,7 +59,7 @@ h1 {
   font-family: 'Makinas-4-Flat';
 
   @include bottomSeparator {
-    margin-top: 0.2em;
+    margin-top: 0.25em;
   };
 }
 
@@ -129,6 +129,10 @@ div.link-block {
 
     span.name, span.description {
       display: block;
+    }
+
+    span.description {
+      color: $c-text;
     }
   }
 
