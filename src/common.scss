@@ -1,9 +1,6 @@
 @import "./defs.scss";
 
 $header-height: 40px;
-$screen-width-small: 786px;
-$screen-width-midium: 1024px;
-$screen-width-large: 1600px;
 
 body {
   margin: 0;
@@ -133,6 +130,7 @@ div.link-block {
 
     span.description {
       color: $c-text;
+      text-decoration: none;
     }
   }
 

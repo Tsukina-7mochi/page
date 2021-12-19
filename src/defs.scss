@@ -17,6 +17,11 @@ $radius: 6px;
 $shadow-normal: 0px 0px 5px $c-def-black;
 $gradient-basic: linear-gradient(to right, $c-def-highlight 0%, $c-def-highlight2 100%);
 
+$screen-width-mobile: 425px;
+$screen-width-small: 786px;
+$screen-width-midium: 1024px;
+$screen-width-large: 1600px;
+
 @mixin bottomSeparator {
   &::after {
     @content;

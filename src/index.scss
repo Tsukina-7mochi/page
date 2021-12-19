@@ -2,7 +2,7 @@
 @import "./defs.scss";
 
 h1 {
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: $screen-width-mobile) {
     line-height: 1em;
 
     span {
@@ -20,4 +20,8 @@ nav.links {
   grid-template-columns: 1fr 1fr;
   gap: 0.2em;
   margin: 0.3em 0;
+
+  @media screen and (max-width: $screen-width-mobile) {
+    grid-template-columns: 1fr;
+  }
 }
