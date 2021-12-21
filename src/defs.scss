@@ -14,7 +14,7 @@ $c-link-text-visited: $c-def-highlight2;
 $c-border: $c-def-gray;
 
 $radius: 6px;
-$shadow-normal: 0px 0px 5px $c-def-black;
+$shadow-normal: 0px 0px 5px rgba($c-def-black, 50%);
 $gradient-basic: linear-gradient(to right, $c-def-highlight 0%, $c-def-highlight2 100%);
 
 $screen-width-mobile: 425px;
