@@ -1,5 +1,5 @@
 // stylesheet for index.html
-@import "./defs.scss";
+@import "../common/defs.scss";
 
 h1 {
   @media screen and (max-width: $screen-width-mobile) {

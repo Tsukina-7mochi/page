@@ -55,8 +55,8 @@ module.exports = {
     ]
   },
   entry: {
-    main: path.join(srcPath, 'main.js'),
-    index: path.join(srcPath, 'index.js')
+    main: path.join(srcPath, 'common/main.js'),
+    index: path.join(srcPath, 'index/index.js')
   },
   output: {
     filename: '[name].bundle.js',
