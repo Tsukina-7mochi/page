@@ -1,5 +1,6 @@
 /* eslint-env node */
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const srcPath  = path.join(__dirname, 'src');
 const destPath = path.join(__dirname, 'docs');
@@ -8,7 +9,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css/,
+        test: /\.html$/,
+        use: 'html-loader',
+      },
+      {
+        test: /\.css$/,
         use: [
           'style-loader',
           {
@@ -62,6 +67,36 @@ module.exports = {
     filename: '[name].bundle.js',
     path: destPath,
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(srcPath,  'index/index.html'),
+          to:   path.join(destPath, 'index.html')
+        },
+        {
+          from: path.join(srcPath,  'products/products.html'),
+          to:   path.join(destPath, 'products.html')
+        },
+        {
+          from: path.join(srcPath,  'products/aseprite-scripts.html'),
+          to:   path.join(destPath, 'aseprite-scripts.html')
+        },
+        {
+          from: path.join(srcPath,  'products/byteStreamBuffer.html'),
+          to:   path.join(destPath, 'byteStreamBuffer.html')
+        },
+        {
+          from: path.join(srcPath,  'products/crlfuck.html'),
+          to:   path.join(destPath, 'crlfuck.html')
+        },
+        {
+          from: path.join(srcPath,  'products/web-vr.html'),
+          to:   path.join(destPath, 'web-vr.html')
+        }
+      ]
+    }),
+  ],
   stats: {
     builtAt: true,
     errorsCount: true,

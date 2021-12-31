@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byte Stream Buffer Library for Lua | 糖衣月餅</title>
+  <script src="main.bundle.js"></script>
+  <script src="index.bundle.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Top Page</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>
+      <span>Byte Stream Buffer Library for Lua</span>
+    </h1>
+
+    <section>
+      <p>
+        初めてまともにmetatableを使った。
+        Luaって小さい言語のわりにOOPだし演算子のオーバーライドできるしすごいよね。
+        長さ演算子とか結合演算子とか添字演算子とかも実装できるの好き。
+        こういう機能にロマンを感じてしまう。
+        ただ動的型付けだから最低限の型チェックを作るのが面倒くさかった。
+      </p>
+
+      <p>
+        Aseprite Scriptsのpsd出力スクリプトのpsd読み込みをこれで書こうかなと思ったりはしている。
+        (もともとは書き出しをこれで書こうかなと思って作ったところもあるけど、
+        作り直す必要もないなとなった)
+        <br>
+        ただ書き出しに比べて読み込みは労力が大きすぎてあんまりやりたくはない....かもしれない。
+        書き出しはともかく読み込みってあんまり需要ない気がするし、それ以上にanimated psdに対応させたい。
+        <br>
+        ただちょっと手を付けたりつけなかったりしているico/cur/aniの出力スクリプトはこれを使うつもりでいる。
+        というのはオフセットを記録するフィールドがあるのでこのライブラリを使うのが楽。
+        あとからファイルのヘッドを移動して上書きしてもできなくはないと思うけど。
+      </p>
+    </section>
+  </main>
+</body>
+</html>

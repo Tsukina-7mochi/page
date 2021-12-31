@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aseprite Scripts | 糖衣月餅</title>
+  <script src="main.bundle.js"></script>
+  <script src="index.bundle.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Top Page</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>
+      <span>Aseprite Scripts</span>
+    </h1>
+
+    <section>
+      <h2>Export as PSD</h2>
+
+      <p>
+        psdを出力するスクリプト。
+        Luaでフルスクラッチでpsd出力書くのかなり辛かった記憶がある。
+        そもそもpsdのフォーマットを詳しく解説してる文書が少なくて、
+        <a href="https://www.adobe.com/devnet-apps/photoshop/fileformatashtml/">Adobe Photoshop File Formats Specification</a>
+        は網羅的に書いてあるけど説明不足だし、なかなか情報がなくて大変だった。
+      </p>
+
+      <p>
+        Asepriteが公式にpsdの対応をするという話が出ているのだけれどまだ開発段階らしい。
+        Asepriteの場合現状LuaのスクリプトからCのDLLを呼び出せないのでネイティブで実装してくれるなら
+        それに越したことはないよね。DLL呼び出しは開発者の人に聞いたら難しいらしい、、、。
+        ただちょっと寂しいよね。色んな人が使ってくれているらしいし。
+      </p>
+    </section>
+
+    <section>
+      <h2>Smooth Filter</h2>
+
+      <p>
+        ドット絵の角を滑らかにするといい感じになるというのを知って作ったフィルタ。
+      正直aseprite上で実装するより単独のアプリにするとかWebAppにしたほうが良かったと思う。
+      </p>
+    </section>
+
+    <section>
+      <h2>Lcd Pixel Filter</h2>
+
+      <p>
+        各色をRGB成分に分解して並べるスクリプト。
+        RGBパターンを変えたりすると結構楽しい。
+        二色刷りみたいなこともできて楽しい。
+        三原色だけじゃなくて任意の(RGB空間で一次独立なベクトルを持つ)色でやっても面白いかもしれない
+        (表現できない色が出てくるけどもともと色変わっちゃうし面白さはあるよね)。
+      </p>
+    </section>
+  </main>
+</body>
+</html>
